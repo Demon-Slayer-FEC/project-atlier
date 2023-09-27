@@ -59,5 +59,3 @@ function Carousel() {
 }
 
 export default Carousel;
-
-// style={{ transform: `translateX(-${relatedIndex} * 25%)` }}

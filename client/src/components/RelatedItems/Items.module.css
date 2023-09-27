@@ -18,6 +18,7 @@ body {
 .items-list-wrapper {
   overflow: hidden;
   width: 100%;
+  -webkit-mask-image: linear-gradient(to right, black calc(100% - 100px), transparent);
 }
 
 .items-list-container {
@@ -45,6 +46,7 @@ body {
   border-width: 0.1rem;
   border-radius: 0.5rem;
   margin: 1rem;
+  padding-bottom: 0.5rem;
   transition: all .125s ease-out;
 }
 
@@ -109,13 +111,13 @@ body {
 }
 
 .items-product-category {
-  font-size: 0.7rem;
+  font-size: max(0.7rem, 14px);
   margin-top: 1%;
   font-style: italic;
 }
 
 .items-product-name {
-  font-size: 0.9rem;
+  font-size: max(0.9rem, 16px);
   font-weight: 500;
   margin-top: 1%;
   margin-bottom: 1%;
@@ -133,24 +135,25 @@ body {
 
 .items-plus {
   color: var(--main1-color);
-  font-size: 3.1rem;
+  font-size: 4rem;
   position: absolute;
   top: 30%;
 }
 
 .items-add-to-outfit {
   position: absolute;
-  top: 55%;
+  top: 65%;
   color: var(--main2-color);
   font-weight: 500;
+  font-size: 1.3rem;
 }
 
 /**** Carousel ****/
 
 .left-arrow, .right-arrow {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 45%;
+  transform: translateY(-45%);
   font-size: 1rem;
   z-index: 1;
 }

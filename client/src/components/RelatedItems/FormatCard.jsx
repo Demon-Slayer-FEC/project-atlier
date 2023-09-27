@@ -42,7 +42,9 @@ function FormatCard({ name, image, price, category, stars, outfit, item, salePri
   }
 
   return (
-    <div className={itemStyles['items-card']} onDoubleClick={(e) => navigateToRelatedItem(e, item.details.id)}>
+    <div className={itemStyles['items-card']}
+      onDoubleClick={(e) => navigateToRelatedItem(e, item.details.id)}
+    >
       <FaInfoCircle className={
         `fa-solid fa-circle-info ${itemStyles['items-icon']} ${itemStyles['items-modal']}`}
         onClick={(e) => handleModalClick(e, item)}
