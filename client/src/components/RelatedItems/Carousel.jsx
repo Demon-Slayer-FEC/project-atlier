@@ -37,29 +37,25 @@ function Carousel() {
   }, [outfitList]);
 
   return (
-    <div className={`${itemStyles['items-outfit-container']}`}>
-      <div className={`${itemStyles['items-outfit-wrapper']}`}>
-        <div className={`${itemStyles['items-list-container']} ${itemStyles['items-list-related']}`}>
-          {relatedIndex >= 1 && <FaChevronLeft className={itemStyles['left-arrow']} onClick={() => prevSlide('related')} />}
+    <div className={`${itemStyles['items-all']}`}>
+      <div className={`${itemStyles['items-list-container']} ${itemStyles['items-list-related']}`}>
+        {relatedIndex >= 1 && <FaChevronLeft className={itemStyles['left-arrow']} onClick={() => prevSlide('related')} />}
 
-          <ItemsList relatedIndex={relatedIndex} />
+        <ItemsList relatedIndex={relatedIndex} />
 
-          {(related.length >= 5 && relatedIndex !== related.length - 5)
-          && <FaChevronRight className={itemStyles['right-arrow']} onClick={() => nextSlide('related')} />}
-        </div>
-        <div className={`${itemStyles['items-list-container']} ${itemStyles['items-list-outfit']}`}>
-          {outfitIndex >= 1 && <FaChevronLeft className={itemStyles['left-arrow']} onClick={() => prevSlide()} />}
+        {(related.length >= 5 && relatedIndex !== related.length - 5)
+        && <FaChevronRight className={itemStyles['right-arrow']} onClick={() => nextSlide('related')} />}
+      </div>
+      <div className={`${itemStyles['items-list-container']} ${itemStyles['items-list-outfit']}`}>
+        {outfitIndex >= 1 && <FaChevronLeft className={itemStyles['left-arrow']} onClick={() => prevSlide()} />}
 
-          <OutfitList outfitIndex={outfitIndex} />
+        <OutfitList outfitIndex={outfitIndex} />
 
-          {(outfitList.length > 4 && outfitIndex !== outfitList.length - 4)
-          && <FaChevronRight className={itemStyles['right-arrow']} onClick={() => nextSlide()} />}
-        </div>
+        {(outfitList.length > 4 && outfitIndex !== outfitList.length - 4)
+        && <FaChevronRight className={itemStyles['right-arrow']} onClick={() => nextSlide()} />}
       </div>
     </div>
   );
 }
 
 export default Carousel;
-
-// style={{ transform: `translateX(-${relatedIndex} * 25%)` }}
